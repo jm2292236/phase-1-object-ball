@@ -46,7 +46,7 @@ function gameObject() {
                     points: 223,
                     rebounds: 224,
                     assists: 225,
-                    steals: 2262,
+                    steals: 226,
                     blocks: 227,
                     slamDunks: 228 
                 }
@@ -265,17 +265,17 @@ function doesLongNameStealATon() {
                 playerName = playerInObj;
             }
 
-            if (game[team].players[playerInObj].steal > mostSteals) {
+            if (game[team].players[playerInObj].steals > mostSteals) {
                 playerWithMostSteals = playerInObj;
-                mostSteals = game[team].players[playerInObj].mostSteals;
+                mostSteals = game[team].players[playerInObj].steals;
             }
         }
     }
 
     if (playerName === playerWithMostSteals) {
-        return 'Player with longest name has also the most steals!';
+        return `Player with longest name (${playerName}) has also the most steals!`;
     } else {
-        return 'Player with longest name is not who steals the most!';
+        return `Player with longest name (${playerName}) is not who steals the most (${playerWithMostSteals})!`;
     }
 }
 
