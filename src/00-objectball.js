@@ -151,14 +151,12 @@ function playerNumbers(teamToLookFor) {
     for (team in game) {
         if (game[team].teamName === teamToLookFor) {
             for (player in game[team].players) {
-                for (playerName in game[team].players[player]) {
-                    playerNumbersArray.push(game[team].players[player].number);
-                }
+                playerNumbersArray.push(game[team].players[player].number);
             }
         }
     }
 
-    return [];
+    return playerNumbersArray;
 }
 
 console.log('\n--- Function playerNumbers ---');
